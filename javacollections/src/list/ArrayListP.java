@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class ArrayListP {
 
-    public void test(){
+     void main(){
         List<Integer> intlist=new ArrayList<>();
         intlist.add(1);
         intlist.add(2);
@@ -23,6 +23,10 @@ public class ArrayListP {
 
         // starting index is inclusive, but ending index is exclusive
         List<Integer> subList=intlist.subList(0,3);
+        // sublist is not a deep copy, it only copies reference,
+        // if contents in sublist is changes then content of copied list will also change
+        subList.set(0,1000);
+
 
     }
 }
