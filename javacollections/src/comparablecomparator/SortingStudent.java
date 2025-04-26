@@ -1,8 +1,6 @@
 package comparablecomparator;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class SortingStudent {
 
@@ -25,6 +23,9 @@ public class SortingStudent {
         Collections.sort(students,new StudentIdComparator().thenComparing(new StudentNameComparator()));
 
         System.out.println(students);
+
+        // sorted according to the specified comparator.
+        Set<Student> set=new TreeSet<>(new StudentNameComparator());
 
 
     }

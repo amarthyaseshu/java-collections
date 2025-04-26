@@ -4,6 +4,9 @@ package comparablecomparator;
 import java.util.Objects;
 
 public class Student implements Comparable<Student> {
+    private int id;
+    private String name;
+
     @Override
     public String toString() {
         return "Student{" +
@@ -30,8 +33,7 @@ public class Student implements Comparable<Student> {
         return Objects.hash(id, name);
     }
 
-    private int id;
-    private String name;
+
 
     public String getName() {
         return name;
